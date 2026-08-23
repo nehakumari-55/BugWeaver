@@ -15,6 +15,66 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles-modern.css">
+  <style>
+    /* Self-contained counter cards for reliable GitHub Pages rendering */
+    .metric-tiles {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 20px !important;
+      width: 100%;
+    }
+    .metric-tiles .metric-card {
+      display: block;
+      min-width: 0;
+      min-height: 148px;
+      padding: 25px 24px;
+      color: #fff;
+      background: #111214;
+      border: 1px solid #292b2f;
+      border-radius: 16px;
+      box-shadow: 0 16px 38px rgba(7,29,46,.11);
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .metric-tiles .metric-card:hover {
+      transform: translateY(-6px);
+      border-color: #4b4f55;
+      box-shadow: 0 23px 48px rgba(7,29,46,.18);
+    }
+    .metric-tiles .metric-card > span {
+      display: block;
+      margin: 0 0 8px;
+      color: #9ca9c7;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.3;
+      letter-spacing: .08em;
+    }
+    .metric-tiles .metric-card > strong {
+      display: block;
+      margin: 0 0 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: clamp(31px, 3vw, 39px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -.05em;
+    }
+    .metric-tiles .metric-card > p {
+      margin: 0;
+      color: #8695b6;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .metric-tiles .metric-white > strong { color: #fff; }
+    .metric-tiles .metric-green > strong { color: #24e5a0; }
+    .metric-tiles .metric-blue > strong { color: #1677ff; }
+    .metric-tiles .metric-purple > strong { color: #8229f5; }
+    @media (max-width: 900px) {
+      .metric-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    }
+    @media (max-width: 520px) {
+      .metric-tiles { grid-template-columns: 1fr !important; }
+    }
+  </style>
 </head>
 <body>
   <header class="nav-wrap">
