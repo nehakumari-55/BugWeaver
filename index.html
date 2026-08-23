@@ -74,6 +74,118 @@
     @media (max-width: 520px) {
       .metric-tiles { grid-template-columns: 1fr !important; }
     }
+    .domain-section { padding-top: 32px; }
+    .domain-title {
+      margin: 0 0 20px;
+      color: #7183a5;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+    .domain-tiles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .domain-card {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 13px;
+      min-height: 112px;
+      padding: 23px 22px;
+      color: #fff;
+      background: #111214;
+      border: 1px solid #292b2f;
+      border-radius: 16px;
+      box-shadow: 0 16px 38px rgba(7,29,46,.09);
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .domain-card:hover {
+      transform: translateY(-6px);
+      border-color: #4b4f55;
+      box-shadow: 0 23px 48px rgba(7,29,46,.17);
+    }
+    .domain-icon { width: 22px; height: 22px; margin-top: 2px; color: #1687ff; }
+    .domain-icon.green { color: #20dfad; }
+    .domain-icon.purple { color: #962fff; }
+    .domain-icon svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .domain-card h3 { margin: 0 0 5px; color: #fff; font-size: 17px; line-height: 1.25; }
+    .domain-card p { margin: 0; color: #9badcd; font-size: 14px; line-height: 1.45; }
+    @media (max-width: 850px) {
+      .domain-tiles { grid-template-columns: 1fr; }
+    }
+    .quality-story { background: linear-gradient(135deg, #081b29, #0c2533); }
+    .quality-story .quality-intro {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 46px;
+    }
+    .quality-story .quality-intro h2 {
+      max-width: 600px;
+      color: #f2f6ff;
+      font-family: "DM Sans", sans-serif;
+      font-size: clamp(42px, 5vw, 62px);
+      font-weight: 600;
+      letter-spacing: -.045em;
+      line-height: 1.04;
+    }
+    .quality-story .quality-intro > p {
+      margin: 0;
+      color: #b9ceef;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+    .quality-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+    .quality-card {
+      min-height: 330px;
+      padding: 36px 34px;
+      background: rgba(13, 31, 50, .82);
+      border: 1px solid #293c52;
+      border-radius: 26px;
+      transition: transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+    .quality-card:hover { transform: translateY(-7px); border-color: #526d8c; background: #10263e; }
+    .quality-card h3 { margin: 0 0 24px; color: #f5f7ff; font-size: 21px; }
+    .quality-card p { margin: 0 0 20px; color: #b9ceef; font-size: 17px; line-height: 1.72; }
+    .quality-card p:last-child { margin-bottom: 0; }
+    @media (max-width: 800px) {
+      .quality-story .quality-intro, .quality-cards { grid-template-columns: 1fr; }
+      .quality-story .quality-intro { gap: 28px; }
+      .quality-card { min-height: auto; padding: 28px 24px; border-radius: 20px; }
+    }
+    .dark-feature { max-width: none; color: #eaf1ff; background: #091525; padding-left: max(32px,calc((100% - 1180px)/2 + 32px)); padding-right: max(32px,calc((100% - 1180px)/2 + 32px)); }
+    .feature-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: center; margin-bottom: 38px; }
+    .feature-intro h2 { color: #f4f7ff; font-family: "DM Sans",sans-serif; font-size: clamp(38px,4.2vw,54px); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; }
+    .feature-intro p { margin: 0; color: #b9ceef; font-size: 16px; line-height: 1.7; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .skill-card,.feature-card,.location-card,.direction-card { padding: 26px; background: #101d31; border: 1px solid #293b54; border-radius: 20px; }
+    .skill-card { min-height: 230px; transition: transform .3s ease,border-color .3s ease; }
+    .skill-card:hover { transform: translateY(-5px); border-color: #4c688c; }
+    .skill-card h3 { margin: 0 0 17px; color: #45e4d4; font-size: 15px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag { display: inline-flex; padding: 9px 12px; color: #e7efff; background: #16243a; border: 1px solid #34445c; border-radius: 999px; font-size: 12px; line-height: 1; }
+    .feature-pair,.location-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+    .feature-card h3,.location-card h3 { margin: 0 0 20px; color: #fff; font-size: 18px; }
+    .feature-card p,.location-card p { color: #b9ceef; line-height: 1.7; }
+    .workflow { display: flex; flex-wrap: wrap; gap: 10px; }
+    .workflow span { padding: 10px 12px; background: #172438; border: 1px solid #34445c; border-radius: 999px; color: #eef4ff; font-size: 12px; }
+    .location-card .location-kicker { color: #43e5ce; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+    .location-card .location-name { margin: 6px 0 14px; color: #fff; font-family: "DM Sans",sans-serif; font-size: clamp(32px,4vw,48px); letter-spacing: -.045em; }
+    .direction-section { background: var(--ivory); }
+    .direction-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 55px; align-items: start; }
+    .direction-grid h2 { font-size: clamp(40px,4.5vw,56px); }
+    .direction-copy { font-size: 17px; color: #4f5c64; }
+    .direction-points { display: grid; gap: 10px; margin-top: 25px; }
+    .direction-points span { display: flex; gap: 12px; padding: 12px 15px; background: rgba(255,255,255,.65); border: 1px solid #d8d2c5; border-radius: 10px; }
+    .direction-points span::before { content: "✓"; color: #8c6a34; font-weight: 700; }
+    @media(max-width:850px){.feature-intro,.direction-grid,.feature-pair,.location-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.skills-grid{grid-template-columns:1fr}.skill-card{min-height:auto}}
   </style>
 </head>
 <body>
@@ -106,15 +218,24 @@
       </div>
     </section>
 
-    <section class="statement" id="story">
-      <div class="section narrow">
-        <div class="eyebrow light">MY CAREER STORY</div>
-        <h2>Quality is not the final checkpoint.<br>It is how trust is built.</h2>
-        <div class="story-copy">
-          <p>I began my career close to the evidence: writing test cases, interrogating databases, and tracing whether business rules survived every transaction. That foundation taught me that the most valuable QA professionals do more than find defects. They make risk visible early enough for teams to act.</p>
-          <p>As the systems grew more complex, so did my role. I moved from test execution into integration assurance, API verification, automation, migration validation, and go-live readiness. Today, I connect technical detail with business consequence—helping developers, business representatives, and service providers reach a shared, evidence-based release decision.</p>
+    <section class="statement quality-story" id="story">
+      <div class="section">
+        <div class="quality-intro reveal">
+          <h2>Quality is more than finding bugs.</h2>
+          <p>I approach testing as a product-quality discipline: understand the requirement, challenge assumptions, identify risks, validate the business journey, inspect the data behind it, and make quality visible.</p>
         </div>
-        <blockquote>“My work is complete when the team can move forward with confidence—and can show exactly why.”</blockquote>
+        <div class="quality-cards reveal-group">
+          <article class="quality-card">
+            <h3>A quality-focused approach</h3>
+            <p>With a Computer Science and Engineering background, I have built my career around taking ownership of software quality. My experience covers functional, regression, integration, system, exploratory, API, UI, end-to-end, and user acceptance testing.</p>
+            <p>I believe effective testing starts before execution: understanding requirements, identifying ambiguity, defining risk-based coverage, and ensuring the right stakeholders are involved at the right time.</p>
+          </article>
+          <article class="quality-card">
+            <h3>Connecting business and technology</h3>
+            <p>As a testing professional, I work closely with business users, developers, technical teams, data teams, and release management. During regression cycles, defect triage, cutover activities, and go-live readiness checks, my focus is to keep delivery controlled, transparent, and well supported from a quality perspective.</p>
+            <p>This combination of technical testing and stakeholder collaboration is particularly valuable in complex enterprise environments where quality, traceability, and reliability matter.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -167,13 +288,61 @@
       <p class="integrity-note">Public version: client identity, transaction volumes, timelines, and confidential incident details are intentionally withheld.</p>
     </section>
 
-    <section class="section capabilities">
-      <div><div class="eyebrow">WHAT I BRING</div><h2>Hands-on depth.<br>Leadership perspective.</h2></div>
-      <div class="cap-list">
-        <article><span>01</span><div><h3>Quality strategy & leadership</h3><p>Risk-based testing · Release readiness · Defect management · UAT coordination · Audit evidence</p></div></article>
-        <article><span>02</span><div><h3>Automation & engineering</h3><p>Python · Playwright · Selenium · Java · VBA · Power Automate · Postman</p></div></article>
-        <article><span>03</span><div><h3>Data & integration assurance</h3><p>SQL · Oracle · PostgreSQL · MS SQL · Snowflake · REST APIs · Data reconciliation</p></div></article>
-        <article><span>04</span><div><h3>Payments domain</h3><p>Payment systems · Transaction processing · SEPA · Target2/T2S · ISO 20022 · Banking</p></div></article>
+    <section class="section dark-feature" aria-labelledby="skills-title">
+      <div class="feature-intro reveal"><h2 id="skills-title">What I bring to a QA team</h2><p>A combination of test leadership, technical depth, analytical thinking, and practical collaboration across the delivery lifecycle.</p></div>
+      <div class="skills-grid reveal-group">
+        <article class="skill-card"><h3>Test Leadership &amp; Quality</h3><div class="tag-list"><span class="tag">Test Strategy</span><span class="tag">Test Planning</span><span class="tag">SIT</span><span class="tag">UAT</span><span class="tag">Risk-Based Testing</span><span class="tag">Regression</span><span class="tag">Defect Triage</span><span class="tag">Go-Live Readiness</span><span class="tag">Release Validation</span></div></article>
+        <article class="skill-card"><h3>Web &amp; UI Testing</h3><div class="tag-list"><span class="tag">Functional Testing</span><span class="tag">UI Testing</span><span class="tag">E2E Testing</span><span class="tag">Exploratory Testing</span><span class="tag">Cross-Browser Testing</span><span class="tag">Smoke Testing</span><span class="tag">Regression Testing</span></div></article>
+        <article class="skill-card"><h3>API &amp; Data Validation</h3><div class="tag-list"><span class="tag">REST API</span><span class="tag">Postman</span><span class="tag">REST Assured</span><span class="tag">JSON</span><span class="tag">SOAP UI</span><span class="tag">SQL</span><span class="tag">Oracle</span><span class="tag">Data Validation</span></div></article>
+        <article class="skill-card"><h3>Automation</h3><div class="tag-list"><span class="tag">Selenium</span><span class="tag">Playwright</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">JUnit</span><span class="tag">Automation Frameworks</span></div></article>
+        <article class="skill-card"><h3>Enterprise &amp; Delivery</h3><div class="tag-list"><span class="tag">Enterprise Applications</span><span class="tag">SAP Testing</span><span class="tag">SAP Fiori</span><span class="tag">Agile Scrum</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">CI/CD</span><span class="tag">Jenkins</span><span class="tag">Git</span></div></article>
+        <article class="skill-card"><h3>Modern Quality Engineering</h3><div class="tag-list"><span class="tag">Shift Left</span><span class="tag">Shift Right</span><span class="tag">Monitoring</span><span class="tag">Observability</span><span class="tag">Generative AI</span><span class="tag">AI-Assisted Testing</span><span class="tag">Prompt Engineering</span><span class="tag">LLMs</span></div></article>
+      </div>
+    </section>
+
+    <section class="section dark-feature" aria-labelledby="ai-title">
+      <div class="feature-intro reveal"><h2 id="ai-title">AI as a QA accelerator.</h2><p>I use AI selectively to reduce repetitive work while keeping requirements, test intent, evidence, and final validation under human control.</p></div>
+      <div class="feature-pair reveal-group">
+        <article class="feature-card"><h3>My approach</h3><p>AI can accelerate test design, identify scenario ideas, challenge assumptions, and refine documentation. Generated output still needs to be reviewed against requirements, business rules, and actual system behaviour.</p></article>
+        <article class="feature-card"><h3>QA workflow</h3><div class="workflow"><span>01 Understand requirement</span><span>02 Generate scenario ideas</span><span>03 Challenge edge cases</span><span>04 Create / refine tests</span><span>05 Execute &amp; validate</span><span>06 Analyse defects</span></div></article>
+      </div>
+    </section>
+
+    <section class="section domain-section" aria-labelledby="domain-title">
+      <h2 class="domain-title" id="domain-title">TARGET INDUSTRY DOMAINS</h2>
+      <div class="domain-tiles reveal-group">
+        <article class="domain-card">
+          <span class="domain-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.6-2.8 8-7 10-4.2-2-7-5.4-7-10V6l7-3Z"/><path d="m9.2 12 1.8 1.8 3.8-4"/></svg>
+          </span>
+          <div><h3>Insurance &amp; Workflows</h3><p>Guidewire Policy/ClaimCenter, Coupa procurement, and invoicing automation.</p></div>
+        </article>
+        <article class="domain-card">
+          <span class="domain-icon green" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 21h16M6 21V10h5v11M11 21V4h7v17M8 13h1M8 16h1M14 8h1M14 12h1M14 16h1"/></svg>
+          </span>
+          <div><h3>Banking &amp; Finance</h3><p>Transaction-flow validation, REST APIs, SQL auditing, and payment-system assurance.</p></div>
+        </article>
+        <article class="domain-card">
+          <span class="domain-icon purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 12h4l2.5-8 5 16 2.5-8h4"/></svg>
+          </span>
+          <div><h3>Healthcare Platforms</h3><p>Interoperability, secure-session testing, and regulatory data-compliance focus.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark-feature" aria-labelledby="location-title">
+      <div class="location-grid reveal-group">
+        <article class="location-card"><span class="location-kicker">BASED IN GERMANY</span><h2 class="location-name" id="location-title">Düsseldorf · Germany</h2><p>I am currently based in Düsseldorf, Germany, with a valid residence permit and full employment rights.</p><p>I am open to hybrid and remote opportunities in Germany and international teams.</p></article>
+        <article class="location-card"><h3>What I’m looking for</h3><p>I’m interested in Software Test Engineer, Senior QA Engineer, Test Automation, and Quality Engineering roles where I can contribute to reliable enterprise software while continuing to grow in modern testing practices.</p></article>
+      </div>
+    </section>
+
+    <section class="section direction-section" aria-labelledby="direction-title">
+      <div class="direction-grid">
+        <div><div class="eyebrow">WHY THIS DIRECTION</div><h2 id="direction-title">Quality at institutional scale.</h2></div>
+        <div class="direction-copy"><p>I’m particularly interested in opportunities where software quality has a direct connection to institutional reliability, operational resilience, and stakeholder confidence.</p><p>The scale and institutional responsibility of the European Central Bank make this type of environment especially compelling to me. My experience in structured testing, SIT and UAT delivery, defect management, release validation, and cross-functional collaboration gives me a strong foundation for contributing to complex, quality-critical systems.</p><div class="direction-points"><span>Structured test planning and risk identification</span><span>Strong experience across SIT, UAT, regression, and integration testing</span><span>Clear defect reporting, triage, and stakeholder communication</span><span>Collaboration across business, development, data, and release teams</span><span>Practical automation and API testing experience</span><span>A quality mindset suited to controlled and highly accountable enterprise environments</span></div></div>
       </div>
     </section>
 
