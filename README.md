@@ -19,11 +19,11 @@ This package is ready for the repository that publishes:
 BugWeaver/
   index.html
   styles.css
+  styles-modern.css
   script.js
   Neha_Kumari_CV.pdf
   Neha_Kumari_CV.docx
-  assets/
-    neha-kumari.png
+  neha-kumari.png
 ```
 
-All website links are relative, so the portfolio works correctly under the `/BugWeaver/` project path. The migration case study intentionally anonymizes confidential client information.
+All website links are relative, so the portfolio works correctly under the `/BugWeaver/` project path. File names are case-sensitive: upload the image exactly as `neha-kumari.png`. The migration case study intentionally anonymizes confidential client information.
